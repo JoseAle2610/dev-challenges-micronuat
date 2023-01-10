@@ -43,7 +43,7 @@ java {
 
 tasks.withType(JavaCompile) {
     options.fork = true
-    options.forkOptions.jvmArgs << '-Dmicronaut.openapi.views.spec=rapidoc.enabled=true,rapidoc.js.url=https://unpkg.com/rapidoc@9.3.3/dist/rapidoc-min.js'
+    options.forkOptions.jvmArgs << '-Dmicronaut.openapi.views.spec=rapidoc.enabled=true'
 }
 
 

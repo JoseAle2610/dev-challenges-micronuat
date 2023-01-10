@@ -4,7 +4,7 @@ micronaut:
   server:
     port: 5000
     cors:
-      enable: true
+      enabled: true
   router:
     static-resources:
       swagger:
@@ -12,4 +12,14 @@ micronaut:
         mapping: /swagger/**
       documentation:
         paths: classpath:META-INF/swagger/views/rapidoc
-        mapping: /documentation/**
+        mapping: /docs/**
+      files:
+        paths: file:${DEV_CHALLENGE:`D:/Dev/files`}
+        mapping: /files/**
+
+files: 
+  path: ${DEV_CHALLENGE:`D:/Dev/files`}
+  allowed-extensions:
+    - jpg
+    - png 
+    - gif

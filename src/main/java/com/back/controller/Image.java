@@ -37,7 +37,7 @@ public class Image {
 		String extension = splitName[1];
 		String fileName = UUID.randomUUID().toString();
 		
-		if (!allowedFileExtensions.contains(extension)) {
+		if (!allowedFileExtensions.contains(extension.toLowerCase())) {
 			return Single.error(new HttpStatusException(HttpStatus.BAD_REQUEST, "extensionNotAllowed"));			
 		}
 		

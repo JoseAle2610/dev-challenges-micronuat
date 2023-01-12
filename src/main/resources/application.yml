@@ -2,6 +2,9 @@ micronaut:
   application:
     name: devchallenges
   server:
+    max-request-size: '100MB'
+    multipart:
+      max-file-size: '100MB'
     port: 5000
     cors:
       enabled: true
@@ -23,3 +26,5 @@ files:
     - jpg
     - png 
     - gif
+    - jpeg
+    - svg
